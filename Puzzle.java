@@ -30,7 +30,12 @@ public class Puzzle {
    * Convert the ArrayList to an array *without* using .toArray() 
    */
   private String[] nicole(ArrayList<String> input) {
-    
+ 	String allInput; 	
+	for( int i=0; i<input.size(); i++ ) {
+		allInput+=input.get(i)+",";
+	}
+	String[] array = allInput.split(",");
+	return array;  
   }
   
   /**
