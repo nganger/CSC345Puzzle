@@ -50,28 +50,30 @@ public class Puzzle {
   public static void main(String[] args) {
     ArrayList<String[]> test = new ArrayList<String[]>() {{
       //How's that for obfuscation?
-      add(["!", "y", "d", "v", "1", ";", "z", "t", "q", "1", "x", "d", "1", "q", "r"]);
-      add(["w", "3", "w", "e", "q", "'", "x", "y", "a", "2", "b", "n", "f", "s", "d"]);
-      add(["x", "6", "c", "r", "a", "[", "c", "u", "s", "3", "n", ",", "g", "d", "m"]);
-      add(["h", "c", "e", "i", "z", "7", "v", "6", "r", "4", "t", ";", "t", "b", "n"]);
-      add(["/", "j", "4", "o", "t", "u", "b", "5", "t", "0", "g", "l", "b", "v", "7"]);
-      add(["k", "y", "y", "p", "f", "3", "n", "4", "g", "9", "d", "u", "d", "c", "p"]);
-      add(["y", "s", "v", "l", "v", "h", "s", "f", "j", "6", "q", "j", "e", "x", "]"]);
-      add(["v", "e", "n", "k", "g", "n", "3", "a", "u", "7", "m", "h", "x", "n", "'"]);
-      add(["d", "o", ",", "t", "t", "m", "e", "b", "t", "5", ",", "a", "n", "g", "b"]);
-      add(["3", "p", "[", "f", "4", "k", "d", "n", "2", "3", ".", "f", "k", "5", "s"]);
-      add(["0", ";", "w", "r", "e", "8", "c", "g", "w", "3", "t", "m", "p", "6", "f"]);
-      add(["-", "s", "r", "d", "h", "o", " ", ".", "s", "4", "8", "3", "]", "8", "h"]);
-      add(["j", "2", "f", "e", "n", "p", "n", "/", "t", "6", "9", ",", "i", "i", "5"]);
-      add(["k", "'", "x", "s", "k", "6", "y", "n", "7", "7", "=", ".", "7", "g", "r"]);
-      add(["y", "d", "n", "e", "e", "p", "v", "a", "q", "5", "2", "n", "t", "e", "3"]);
+      add(new String[]{"!", "y", "d", "v", "1", ";", "z", "t", "q", "1", "x", "d", "1", "q", "r"});
+      add(new String[]{"w", "3", "w", "e", "q", "'", "x", "y", "a", "2", "b", "n", "f", "s", "d"});
+      add(new String[]{"x", "6", "c", "r", "a", "(", "c", "u", "s", "3", "n", ",", "g", "d", "m"});
+      add(new String[]{"h", "c", "e", "i", "z", "7", "v", "6", "r", "4", "t", ";", "t", "b", "n"});
+      add(new String[]{"/", "j", "4", "o", "t", "u", "b", "5", "t", "0", "g", "l", "b", "v", "7"});
+      add(new String[]{"k", "y", "y", "p", "f", "3", "n", "4", "g", "9", "d", "u", "d", "c", "p"});
+      add(new String[]{"y", "s", "v", "l", "v", "h", "s", "f", "j", "6", "q", "j", "e", "x", ")"});
+      add(new String[]{"v", "e", "n", "k", "g", "n", "3", "a", "u", "7", "m", "h", "x", "n", "'"});
+      add(new String[]{"d", "o", ",", "t", "t", "m", "e", "b", "t", "5", ",", "a", "n", "g", "b"});
+      add(new String[]{"3", "p", "(", "f", "4", "k", "d", "n", "2", "3", ".", "f", "k", "5", "s"});
+      add(new String[]{"0", ";", "w", "r", "e", "8", "c", "g", "w", "3", "t", "m", "p", "6", "f"});
+      add(new String[]{"-", "s", "r", "d", "h", "o", " ", ".", "s", "4", "8", "3", ")", "8", "h"});
+      add(new String[]{"j", "2", "f", "e", "n", "p", "n", "/", "t", "6", "9", ",", "i", "i", "5"});
+      add(new String[]{"k", "'", "x", "s", "k", "6", "y", "n", "7", "7", "=", ".", "7", "g", "r"});
+      add(new String[]{"y", "d", "n", "e", "e", "p", "v", "a", "q", "5", "2", "n", "t", "e", "3"});
     }};
     
-    ArrayList<String> aaronResult = aaron(test);
-    ArrayList<String> nickResult = nick(aaronResult);
-    String[] nicoleResult = nicole(nickResult);
-    String robertResult = robert(nicoleResult);
-    String timResult = tim(robertResult);
+    Puzzle puzz = new Puzzle();
+    
+    ArrayList<String> aaronResult = puzz.aaron(test);
+    ArrayList<String> nickResult = puzz.nick(aaronResult);
+    String[] nicoleResult = puzz.nicole(nickResult);
+    String robertResult = puzz.robert(nicoleResult);
+    String timResult = puzz.tim(robertResult);
     System.out.println(timResult);
   }
 }
